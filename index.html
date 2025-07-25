@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Roofing Pros - Free Roof Inspection Staten Island</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a365d 0%, #2d5aa0 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo::before {
+            content: "🏠";
+            margin-right: 10px;
+        }
+        
+        .phone {
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .phone::before {
+            content: "📞";
+            margin-right: 8px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f0f0f0" width="1200" height="800"/><polygon fill="%23d4af37" points="100,400 200,200 300,400"/><polygon fill="%23b8860b" points="200,200 300,400 400,200 500,400"/><polygon fill="%23d4af37" points="400,200 500,400 600,200 700,400"/><polygon fill="%23b8860b" points="600,200 700,400 800,200 900,400"/><polygon fill="%23d4af37" points="800,200 900,400 1000,200 1100,400"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            line-height: 1.2;
+        }
+        
+        .hero .subheadline {
+            font-size: 24px;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+            opacity: 0.95;
+        }
+        
+        .offer-banner {
+            background: #dc2626;
+            color: white;
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            background: white;
+            padding: 60px 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 10px;
+            border-left: 5px solid #2d5aa0;
+            transition: transform 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-item::before {
+            content: "✅";
+            font-size: 24px;
+            margin-right: 15px;
+        }
+        
+        .benefit-text {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        /* About Section */
+        .about {
+            background: #f1f5f9;
+            padding: 60px 0;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-text {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .about-text h2 {
+            font-size: 36px;
+            color: #1a365d;
+            margin-bottom: 30px;
+        }
+        
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-container h3 {
+            font-size: 28px;
+            color: #1a365d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2d5aa0;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(135deg, #b91c1c, #991b1b);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #1a365d;
+            margin-bottom: 50px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 60px;
+            color: #2d5aa0;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+        
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #1a365d;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #1a365d, #2d5aa0);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .final-cta .cta-button {
+            max-width: 400px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a202c;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #68d391;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero .subheadline {
+                font-size: 18px;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .phone {
+                font-size: 18px;
+            }
+        }
+        
+        /* Thank You Page Styles */
+        .thank-you {
+            display: none;
+            background: #f0fdf4;
+            border: 2px solid #22c55e;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .thank-you.show {
+            display: block;
+        }
+        
+        .thank-you h3 {
+            color: #15803d;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .thank-you p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .urgent-phone {
+            background: #dc2626;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Titan Roofing Pros</div>
+                <div class="phone">(718) 555-1234</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Dealing with a Roof Problem in Staten Island?</h1>
+            <p class="subheadline">We'll Inspect It for Free — and Take $500 Off If You Need a New Roof</p>
+            <div class="offer-banner">
+                🔥 Free Roof Inspection + $500 Off Full Replacement 🔥
+            </div>
+            <p style="font-size: 20px; margin-top: 20px;">Fast, affordable roofing from a licensed local crew.<br>No pressure. No hidden fees. Just honest work done right.</p>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 36px; color: #1a365d; margin-bottom: 20px;">Why Choose Titan Roofing Pros?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-text">Free Roof Inspections – No Strings Attached</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-text">$500 Off Full Replacements (This Month Only)</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-text">Same-Day Leak Repair Available</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-text">Licensed & Insured in NYC</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-text">15+ Years Serving Staten Island</div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-text">5-Star Rated by Local Homeowners</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Local Roofing Experts You Can Trust</h2>
+                    <p>At Titan Roofing Pros, we know roof problems can't wait. Whether it's a leak, storm damage, or shingles that just need replacing, we're here to help. We've worked on hundreds of homes in Staten Island — and we treat every one like it's our own.</p>
+                    <p style="margin-top: 20px;">No runaround. No upselling. Just real answers and quality work.</p>
+                </div>
+                
+                <div class="form-container">
+                    <h3>Get Your Free Roof Inspection</h3>
+                    <form id="roofingForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullAddress">Full Address *</label>
+                            <input type="text" id="fullAddress" name="fullAddress" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="issue">Tell us what's going on *</label>
+                            <textarea id="issue" name="issue" rows="4" placeholder="Describe your roofing issue..." required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">🔴 Get My Free Roof Quote</button>
+                    </form>
+                    
+                    <div class="thank-you" id="thankYou">
+                        <h3>Thanks! Your request has been received.</h3>
+                        <p>Your free roof inspection request has been received.</p>
+                        <p>One of our team members will contact you shortly to schedule your inspection.</p>
+                        <div class="urgent-phone">
+                            If it's urgent, call us now at (718) 555-1234
+                        </div>
+                        <p><strong>We've helped over 150 homeowners in Staten Island — you're in good hands.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Staten Island Homeowners Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-text">They fixed my roof the same day I called. Super professional and no surprise costs. I've already told two neighbors about them.</div>
+                    <div class="testimonial-author">— Lisa R., Staten Island</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">Titan Roofing gave me a quote that was $1,200 less than the other companies — and they actually showed up early and cleaned everything up. Highly recommend.</div>
+                    <div class="testimonial-author">— Mike D., Richmond Ave</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">Storm took out half my shingles. These guys had someone at my house within hours and had it patched before the rain came back.</div>
+                    <div class="testimonial-author">— Kevin S., New Springville</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">I usually hate dealing with contractors, but this was different. Straightforward, friendly, and got it done right the first time.</div>
+                    <div class="testimonial-author">— Maria L., Todt Hill</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Still Need Roof Help? Let's Take a Look — It's Free.</h2>
+            <p>No pressure. No hidden fees. Just a quick inspection, honest quote, and fast service if you want to move forward.</p>
+            <button class="cta-button" onclick="document.getElementById('name').scrollIntoView({behavior: 'smooth'})">🔴 Get My Free Roof Quote</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <p>Proudly serving all of Staten Island, NY and surrounding areas</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Phone: (718) 555-1234</p>
+                    <p>Licensed & Insured</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <p>Roof Inspections • Repairs • Replacements • Storm Damage • Emergency Service</p>
+                </div>
+            </div>
+            <p style="border-top: 1px solid #4a5568; padding-top: 20px; opacity: 0.8;">
+                © 2025 Titan Roofing Pros. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Your Google Apps Script URL - Connected to your Google Sheet
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxR0RVRaC_4ekct4KEgMQuH3JinXQ1pZpYyYsPK3-ZbcxtFckk2cSISe-bWKOveZSoQ/exec';
+        
+        // Form submission handler
+        document.getElementById('roofingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                fullAddress: document.getElementById('fullAddress').value,
+                issue: document.getElementById('issue').value
+            };
+            
+            // Show loading state
+            const submitButton = this.querySelector('.cta-button');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
+            // Send to Google Sheets
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // Hide the form
+                    this.style.display = 'none';
+                    
+                    // Show thank you message
+                    document.getElementById('thankYou').classList.add('show');
+                    
+                    // Scroll to thank you message
+                    document.getElementById('thankYou').scrollIntoView({behavior: 'smooth'});
+                } else {
+                    throw new Error('Submission failed');
+                }
+            })
+            .catch(error => {
+                alert('There was an error submitting your request. Please call us at (718) 555-1234.');
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            });
+        });
+        
+        // Smooth scrolling for CTA buttons
+        document.querySelectorAll('.cta-button').forEach(button => {
+            if (!button.onclick) {
+                button.addEventListener('click', function() {
+                    document.getElementById('name').scrollIntoView({behavior: 'smooth'});
+                });
+            }
+        });
+    </script>
+</body>
+</html>
